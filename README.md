@@ -1,25 +1,37 @@
-# C# Learning notes
+# String Data Type
 
-## CLI (Command Line Interface) commands
+C# is a strongly typed language and has a built in `ESLint`.
+Check Program.cs code for syntax
 
-- `dotnet` ## to see the list of commands
-- `dotnet new console -n <project>` ## to create a new console project
-- `dotnet run` ## to run the project
+## Declaration
 
-## App structure
+With the `string` keyword, you can declare a string variable.
+String variables are immutable, meaning that they cannot be changed after they are created.
+The variables itself can be changed, but the original string remains the same in memory.
 
-- helloworld/ : This is the root directory of your application.
-  - helloworld.csproj : This is the project file which contains information about the project and how to build it. It includes references to dependencies, build instructions, and other project metadata.
-  - Program.cs : This is the main entry point of your application. It contains the `Main` method which is the first method that gets called when you run your application.
-  - README.md : This is a markdown file where you can write documentation about your project.
-  - bin/ : This (binaries) directory contains the compiled output of your project when you build it. It's created automatically when you build your project.
-  - obj/ : This directory is used by the .NET build system to hold temporary files and other files needed to compile your project. It's also created automatically when you build your project.
+### Concatenation
 
-## Debug
+You can concatenate strings using the `+` operator.
 
-Press `F5` in VSCode to start debugging.
+### Interpolation
 
-## Browser
+You can use the `$` symbol to interpolate strings (template literals).
 
-Web Assembly helps us to run C# in the browser.
-Try: [text](https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/tutorials/hello-world?tutorial-step=1)
+## Properties
+
+.Length - returns the length number of the string.
+
+## Methods
+
+.ToUpper() - returns the string in uppercase.
+.ToLower() - returns the string in lowercase.
+
+.Trim() - removes whitespace from both ends of a string.
+.TrimStart() - removes whitespace from the beginning of a string.
+.TrimEnd() - removes whitespace from the end of a string.
+
+.Replace("part of the string", "replace it with this") - replaces all specified value with another value in a string.
+
+.Contains("part of the string") - returns true if the string contains the specified value, otherwise false.
+.StartsWith("part of the string") - returns true if the string starts with the specified value, otherwise false.
+.EndsWith("part of the string") - returns true if the string ends with the specified value, otherwise false.
